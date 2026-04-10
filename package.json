@@ -1,0 +1,31 @@
+{
+  "name": "geoxor.moe",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "generate": "set TS_NODE_COMPILER_OPTIONS={\"module\":\"commonjs\"} && ts-node ./src/songGenerator.ts && set TS_NODE_COMPILER_OPTIONS=",
+    "build": "vite-ssg build",
+    "publish": "git add dist && git commit -m \"auto deploy\" && git subtree push --prefix dist origin gh-pages",
+    "serve": "vite preview",
+    "prettify": "npx prettier --write \"./**/*.ts\" && npx prettier --write \"./**/*.json\" && npx prettier --write \"./**/*.vue\""
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vueuse/core": "^6.9.0",
+    "@vueuse/head": "^1.1.26",
+    "music-metadata": "^7.11.4",
+    "typescript": "^4.4.3",
+    "unplugin-icons": "^0.12.18",
+    "unplugin-vue-components": "^0.17.1",
+    "vite": "^2.6.4",
+    "vite-plugin-md": "^0.11.4",
+    "vite-plugin-pwa": "^0.11.7",
+    "vite-plugin-tauri": "^0.1.6",
+    "vite-plugin-windicss": "^1.5.1",
+    "vite-ssg": "^0.16.2",
+    "vue": "^3.2.16",
+    "vue-router": "^4.2.1",
+    "vue-tsc": "^0.3.0",
+    "windicss": "^3.2.1"
+  }
+}
