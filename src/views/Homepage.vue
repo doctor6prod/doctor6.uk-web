@@ -1,51 +1,61 @@
-<script setup lang="ts">
-// Importamos el video de alta resolución (1600x1600)
-import logoVideo from '../assets/doctor6logofloat.webm';
-</script>
-
 <template>
-  <!-- Contenedor principal que centra todo en pantalla -->
-  <div class="flex h-screen w-full justify-center items-center overflow-hidden bg-black">
+  <header class="padding py-4 flex w-full flex-col" :class="$route.name === 'home' && 'absolute'">
+    <noscript class="bg-red-600 text-white text-sm py-1 px-2 w-full rounded-4px mb-2">
+      This site works better with Javascript enabled
+    </noscript>
     
-    <!-- Contenedor del Logo con efecto Click y Hover -->
-    <div 
-      @click="$router.push({ name: 'music' })"
-      class="relative flex items-center justify-center cursor-pointer transition-transform duration-500 ease-out hover:scale-110 active:scale-95"
-    >
+    <div class="flex items-center justify-between">
+      <!-- LOGO DOCTOR 6 (Ruta corregida para producción) -->
+      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
+        @click="$router.push({ name: 'home' })" />
       
-      <!-- RESPLANDOR (GLOW) VERDE DE FONDO -->
-      <div 
-        class="absolute w-[40rem] h-[40rem] bg-green-500/20 filter blur-[100px] rounded-full animate-pulse z-0"
-      ></div>
+      <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
+        <div class="flex gap-4 items-center md:justify-between">
+          <SocialMedia title="instagram" link="https://instagram.com" />
+          <SocialMedia title="youtube" link="https://youtube.com" />
+          <SocialMedia title="discord" link="https://discord.gg" />
+          
+          <li><router-link :to="{ name: 'music' }">Music</router-link></li>
+          <li><router-link :to="{ name: 'services' }">Services</router-link></li>
+          <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
+        </div>
 
-      <!-- VIDEO DEL LOGO 3D -->
-      <video 
-        :src="logoVideo" 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        class="relative z-10 w-[30rem] max-w-[85vw] h-auto mix-blend-screen contrast-125 brightness-110 pointer-events-none"
-      ></video>
-      
+        <button class="flex items-center text-contrast"
+          @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">
+          <i-fluency-moon />
+        </button>
+      </ul>
     </div>
-  </div>
+  </header>
 </template>
 
-<style scoped>
-/* Configuraciones para que el video se vea perfecto */
-video {
-  outline: none;
-  border: none;
-  background: transparent;
-  user-select: none;
-  /* Esto ayuda a que al achicarse no pierda definición */
-  image-rendering: high-quality;
+<script setup lang="ts">
+import SocialMedia from "~/components/SocialMedia.vue";
+import { switchTheme } from "~/logic";
+import { useLocalStorage } from "@vueuse/core";
+import { watch } from "vue";
+
+const themeState = useLocalStorage("theme", "dark");
+watch(themeState, () => switchTheme(themeState.value), { immediate: true });
+</script>
+
+<style scoped lang="postcss">
+header {
+  /* Subimos el z-index para que esté por encima de cualquier video o glow */
+  z-index: 100;
 }
 
-/* Evita que aparezcan barras de scroll molestas */
-:host {
-  display: block;
-  overflow: hidden;
+a.router-link-active {
+  @apply text-accent font-bold;
+}
+
+li {
+  @apply transition-colors duration-200 hover:text-white;
+}
+
+.logo {
+  @apply transition-opacity duration-200 hover:opacity-80;
+  /* Asegura que la imagen tenga un tamaño mínimo para ser visible */
+  min-width: 50px; 
 }
 </style>
