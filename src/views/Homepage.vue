@@ -5,9 +5,9 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- LOGO DOCTOR 6 (Ruta corregida para producción) -->
-      <img class="logo h-5 cursor-pointer" src="/doctor6_logov2.svg"
-        @click="$router.push({ name: 'home' })" />
+      <!-- LOGO DOCTOR 6 (importado desde src/assets) -->
+      <img class="logo h-5 cursor-pointer" :src="logoUrl"
+           @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
         <div class="flex gap-4 items-center md:justify-between">
@@ -31,6 +31,7 @@
 
 <script setup lang="ts">
 import SocialMedia from "~/components/SocialMedia.vue";
+import logoUrl from "~/assets/doctor6_logo_v2.svg";   // IMPORTAMOS EL LOGO BLANCO
 import { switchTheme } from "~/logic";
 import { useLocalStorage } from "@vueuse/core";
 import { watch } from "vue";
