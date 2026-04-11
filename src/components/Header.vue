@@ -5,8 +5,8 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- LOGO DOCTOR 6 -->
-      <img class="hidden md:flex logo h-5 cursor-pointer" src="../assets/doctor6_logo.svg"
+      <!-- LOGO DOCTOR 6 (Corregido para que se vea en todos lados) -->
+      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
         @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
