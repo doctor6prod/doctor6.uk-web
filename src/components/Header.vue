@@ -5,30 +5,21 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- LOGO DOCTOR 6 (Corregido para que se vea en todos lados) -->
-      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
+      <!-- Mantenemos la ruta relativa sin la barra / inicial -->
+      <img class="logo h-5 cursor-pointer" src="doctor6_logo.svg"
         @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
         <div class="flex gap-4 items-center md:justify-between">
-          <!-- TUS REDES REALES YA CARGADAS -->
           <SocialMedia title="instagram" link="https://www.instagram.com/doctor6prod?igsh=czcydHlwMmcyNGU5" />
           <SocialMedia title="youtube" link="https://www.youtube.com/@doctorsix6" />
           <SocialMedia title="discord" link="https://discord.gg/HFQNXYFwwA" />
           
-          <!-- SECCIONES -->
-          <li>
-            <router-link :to="{ name: 'music' }">Music</router-link>
-          </li>
-          <li>
-            <router-link :to="{ name: 'services' }">Services</router-link>
-          </li>
-          <li>
-            <router-link :to="{ name: 'biography' }">Biography</router-link>
-          </li>
+          <li><router-link :to="{ name: 'music' }">Music</router-link></li>
+          <li><router-link :to="{ name: 'services' }">Services</router-link></li>
+          <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
         </div>
 
-        <!-- BOTÓN DE TEMA (LUNA) -->
         <button class="flex items-center text-contrast"
           @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">
           <i-fluency-moon />
@@ -50,7 +41,9 @@ watch(themeState, () => switchTheme(themeState.value), { immediate: true });
 
 <style scoped lang="postcss">
 header {
-  @apply z-50;
+  /* Usamos CSS puro para el z-index porque z-100 no existe en Tailwind base */
+  z-index: 100 !important;
+  position: relative;
 }
 
 a.router-link-active {
@@ -63,5 +56,9 @@ li {
 
 .logo {
   @apply transition-opacity duration-200 hover:opacity-80;
+  /* Forzamos un ancho mínimo para que sea visible */
+  min-width: 120px;
+  height: auto;
 }
 </style>
+  
