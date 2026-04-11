@@ -5,8 +5,8 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- Mantenemos la ruta relativa sin la barra / inicial -->
-      <img class="logo h-5 cursor-pointer" src="doctor6_logo.svg"
+      <!-- Ruta con / inicial para que funcione con el 'base' de vite.config.ts -->
+      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
         @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
@@ -41,7 +41,6 @@ watch(themeState, () => switchTheme(themeState.value), { immediate: true });
 
 <style scoped lang="postcss">
 header {
-  /* Usamos CSS puro para el z-index porque z-100 no existe en Tailwind base */
   z-index: 100 !important;
   position: relative;
 }
@@ -56,9 +55,7 @@ li {
 
 .logo {
   @apply transition-opacity duration-200 hover:opacity-80;
-  /* Forzamos un ancho mínimo para que sea visible */
   min-width: 120px;
   height: auto;
 }
 </style>
-  

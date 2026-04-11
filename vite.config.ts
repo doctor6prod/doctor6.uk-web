@@ -8,6 +8,9 @@ import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import path from "path";
 
 export default defineConfig({
+  // Esta línea le indica a Vite que el sitio está en la subcarpeta del repo
+  base: '/doctor6.uk-web/', 
+  
   resolve: {
     alias: {
       "~/": `${path.resolve(__dirname, "src")}/`,
