@@ -5,8 +5,8 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- Ruta con / inicial para que funcione con el 'base' de vite.config.ts -->
-      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
+      <!-- Usamos :src (con dos puntos) para vincular la variable logoUrl -->
+      <img class="logo h-5 cursor-pointer" :src="logoUrl"
         @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
@@ -31,6 +31,8 @@
 
 <script setup lang="ts">
 import SocialMedia from "~/components/SocialMedia.vue";
+// IMPORTAMOS EL LOGO AQUÍ:
+import logoUrl from "~/assets/doctor6_logo_v2.svg";
 import { switchTheme } from "~/logic";
 import { useLocalStorage } from "@vueuse/core";
 import { watch } from "vue";
@@ -38,24 +40,3 @@ import { watch } from "vue";
 const themeState = useLocalStorage("theme", "dark");
 watch(themeState, () => switchTheme(themeState.value), { immediate: true });
 </script>
-
-<style scoped lang="postcss">
-header {
-  z-index: 100 !important;
-  position: relative;
-}
-
-a.router-link-active {
-  @apply text-accent font-bold;
-}
-
-li {
-  @apply transition-colors duration-200 hover:text-white;
-}
-
-.logo {
-  @apply transition-opacity duration-200 hover:opacity-80;
-  min-width: 120px;
-  height: auto;
-}
-</style>

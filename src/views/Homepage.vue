@@ -6,7 +6,7 @@
     
     <div class="flex items-center justify-between">
       <!-- LOGO DOCTOR 6 (Ruta corregida para producción) -->
-      <img class="logo h-5 cursor-pointer" src="/doctor6_logo.svg"
+      <img class="logo h-5 cursor-pointer" src="/doctor6_logov2.svg"
         @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">

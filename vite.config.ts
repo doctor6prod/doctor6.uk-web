@@ -7,9 +7,9 @@ import Components from "unplugin-vue-components/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import path from "path";
 
-export default defineConfig({
-  // Esta línea le indica a Vite que el sitio está en la subcarpeta del repo
-  base: '/doctor6.uk-web/', 
+export default defineConfig(({ command }) => ({
+  // Si usamos 'build' (para subir a GH), usa la ruta del repo. Si no, usa la raíz.
+  base: command === 'build' ? '/doctor6.uk-web/' : '/',
   
   resolve: {
     alias: {
@@ -36,4 +36,4 @@ export default defineConfig({
     }),
     vue(),
   ],
-});
+}));
