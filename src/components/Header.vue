@@ -5,8 +5,9 @@
     </noscript>
     
     <div class="flex items-center justify-between">
+      <!-- Logo decorativo, clickeable solo si querés volver al home -->
       <img class="logo h-5 cursor-pointer" :src="logoUrl"
-        @click="$router.push({ name: 'home' })" />
+           @click="$router.push({ name: 'home' })" />
       
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
         <div class="flex gap-4 items-center md:justify-between">
@@ -27,3 +28,22 @@
 import SocialMedia from "~/components/SocialMedia.vue";
 import logoUrl from "~/assets/doctor6_logo_v2.svg";
 </script>
+
+<style scoped lang="postcss">
+header {
+  z-index: 100;
+}
+
+a.router-link-active {
+  @apply text-accent font-bold;
+}
+
+li {
+  @apply transition-colors duration-200 hover:text-white;
+}
+
+.logo {
+  @apply transition-opacity duration-200 hover:opacity-80;
+  min-width: 50px; 
+}
+</style>
