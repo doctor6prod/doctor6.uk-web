@@ -22,13 +22,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: "/services",
     name: "services",
-    component: () => import("./views/Services.vue"), // <-- ACÁ puse la S mayúscula
+    component: () => import("./views/Services.vue"), // <-- ACÁ pusiste la S mayúscula
     meta: { title: "Doctor 6 | Services" },
-  },
-  {
-    path: "/downloads/:category?",
-    name: "downloads",
-    component: () => import("./views/Downloads.vue"),
-    meta: { title: "Doctor 6 | Downloads" },
-  },
+  }
 ];
