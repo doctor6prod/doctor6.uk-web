@@ -19,11 +19,6 @@
           <li><router-link :to="{ name: 'services' }">Services</router-link></li>
           <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
         </div>
-
-        <button class="flex items-center text-contrast"
-          @click="themeState === 'dark' ? (themeState = 'light') : (themeState = 'dark')">
-          <i-fluency-moon />
-        </button>
       </ul>
     </div>
   </header>
@@ -32,12 +27,6 @@
 <script setup lang="ts">
 import SocialMedia from "~/components/SocialMedia.vue";
 import logoUrl from "~/assets/doctor6_logo_v2.svg";   // IMPORTAMOS EL LOGO BLANCO
-import { switchTheme } from "~/logic";
-import { useLocalStorage } from "@vueuse/core";
-import { watch } from "vue";
-
-const themeState = useLocalStorage("theme", "dark");
-watch(themeState, () => switchTheme(themeState.value), { immediate: true });
 </script>
 
 <style scoped lang="postcss">
