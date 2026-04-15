@@ -4,20 +4,16 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Cover: typeof import('./src/components/Cover.vue')['default']
-    DownloadCategory: typeof import('./src/components/DownloadCategory.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     IFluencyBandcamp: typeof import('~icons/fluency/bandcamp')['default']
     IFluencyCloud: typeof import('~icons/fluency/cloud')['default']
     IFluencyDiscord: typeof import('~icons/fluency/discord')['default']
     IFluencyGithub: typeof import('~icons/fluency/github')['default']
     IFluencyInstagram: typeof import('~icons/fluency/instagram')['default']
-    IFluencyMoon: typeof import('~icons/fluency/moon')['default']
     IFluencyTank: typeof import('~icons/fluency/tank')['default']
     IFluencyTwitter: typeof import('~icons/fluency/twitter')['default']
     IFluencyYoutube: typeof import('~icons/fluency/youtube')['default']
     SocialMedia: typeof import('./src/components/SocialMedia.vue')['default']
-    Song: typeof import('./src/components/Song.vue')['default']
   }
 }
 

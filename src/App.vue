@@ -4,10 +4,10 @@ import Header from "./components/Header.vue";
 
 <template>
   <div class="flex flex-col min-h-screen bg-black">
-    <!-- El Header ahora debería aparecer arriba -->
+    <!-- Header arriba -->
     <Header />
     
-    <!-- Aquí se muestra el contenido (Homepage, Biography, etc.) -->
+    <!-- Aquí se muestra el contenido de cada ruta -->
     <main class="flex-grow">
       <router-view />
     </main>

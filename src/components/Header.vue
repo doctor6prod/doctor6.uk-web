@@ -5,10 +5,12 @@
     </noscript>
     
     <div class="flex items-center justify-between">
-      <!-- Logo decorativo, clickeable solo si querés volver al home -->
-      <img class="logo h-5 cursor-pointer" :src="logoUrl"
-           @click="$router.push({ name: 'home' })" />
+      <!-- Logo clickeable que lleva al home -->
+      <router-link :to="{ name: 'home' }">
+        <img class="logo h-5" :src="logo" alt="Doctor6 Logo" />
+      </router-link>
       
+      <!-- Menú de navegación y redes -->
       <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
         <div class="flex gap-4 items-center md:justify-between">
           <SocialMedia title="instagram" link="https://www.instagram.com/doctor6prod?igsh=czcydHlwMmcyNGU5" />
@@ -26,7 +28,7 @@
 
 <script setup lang="ts">
 import SocialMedia from "~/components/SocialMedia.vue";
-import logoUrl from "~/assets/doctor6_logo_v2.svg";
+import logo from "../assets/doctor6_logo_v2.svg"; // ruta corregida
 </script>
 
 <style scoped lang="postcss">
