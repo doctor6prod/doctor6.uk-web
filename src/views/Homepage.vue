@@ -7,9 +7,9 @@
              @click="$router.push({ name: 'home' })" />
         <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
           <div class="flex gap-4 items-center md:justify-between">
-            <SocialMedia title="instagram" link="https://instagram.com" />
-            <SocialMedia title="youtube" link="https://youtube.com" />
-            <SocialMedia title="discord" link="https://discord.gg" />
+            <SocialMedia title="instagram" link="https://www.instagram.com/doctor6prod?igsh=czcydHlwMmcyNGU5" />
+            <SocialMedia title="youtube" link="https://www.youtube.com/@doctorsix6" />
+            <SocialMedia title="discord" link="https://discord.gg/HFQNXYFwwA" />
             <li><router-link :to="{ name: 'music' }">Music</router-link></li>
             <li><router-link :to="{ name: 'services' }">Services</router-link></li>
             <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
