@@ -9,7 +9,7 @@ import path from "path";
 
 export default defineConfig(({ command }) => ({
   // Usamos './' para que las rutas funcionen en tu dominio doctor6.uk y en GitHub Pages
-  base: './',
+  base: '/',
   
   resolve: {
     alias: {
