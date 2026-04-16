@@ -8,8 +8,8 @@ import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  // Usamos './' para que las rutas funcionen en tu dominio doctor6.uk y en GitHub Pages
-  base: '/',
+  // Para GitHub Pages: usar el nombre exacto del repo
+  base: '/doctor6.uk-web/',
   
   resolve: {
     alias: {
@@ -29,8 +29,9 @@ export default defineConfig(({ command }) => ({
     Icons({
       customCollections: {
         fluency: FileSystemIconLoader("./public/icons/svg", (svg) =>
-          svg.replace(/^<svg /, '<svg fill="currentColor" ')
-             .replace(/fill=".*?"/g, 'fill="currentColor"')
+          svg
+            .replace(/^<svg /, '<svg fill="currentColor" ')
+            .replace(/fill=".*?"/g, 'fill="currentColor"')
         ),
       },
     }),
