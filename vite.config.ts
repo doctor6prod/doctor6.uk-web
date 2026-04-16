@@ -8,8 +8,8 @@ import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  // Cambiado a '/' para que tu dominio doctor6.uk encuentre los archivos correctamente
-  base: '/',
+  // Usamos './' para que las rutas funcionen en tu dominio doctor6.uk y en GitHub Pages
+  base: './',
   
   resolve: {
     alias: {
