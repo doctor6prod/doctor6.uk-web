@@ -8,8 +8,8 @@ import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  // Si usamos 'build' (para subir a GH), usa la ruta del repo. Si no, usa la raíz.
-  base: command === 'build' ? '/doctor6.uk-web/' : '/',
+  // Cambiado a '/' para que tu dominio doctor6.uk encuentre los archivos correctamente
+  base: '/',
   
   resolve: {
     alias: {
