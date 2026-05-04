@@ -7,21 +7,13 @@
         Tu navegador no soporta video en formato WebM.
       </video>
     </router-link>
-
-    <!-- Botones de redes sociales -->
-    <div class="socials">
-      <!-- Limpié los links de parámetros innecesarios para evitar errores de caracteres -->
-      <SocialMedia title="instagram" link="https://www.instagram.com/doctor6produ/" />
-      <SocialMedia title="youtube" link="https://www.youtube.com/@doctorsix6" />
-      <SocialMedia title="discord" link="https://discord.gg/HFQNXYFwwA" />
-    </div>
-  </section>
-</template>
+  </section> <!-- Faltaba cerrar esta -->
+</template> <!-- Faltaba cerrar esta -->
 
 <script setup lang="ts">
-import SocialMedia from "~/components/SocialMedia.vue";
 import logoUrl from "~/assets/doctor6_logo_v2.svg";
 import videoUrl from "../assets/doctor6logofloat.webm";
+// Saqué el import de SocialMedia porque ya no se usa acá
 </script>
 
 <style scoped lang="postcss">
@@ -36,7 +28,7 @@ import videoUrl from "../assets/doctor6logofloat.webm";
 
 .video-container {
   margin-top: 0.5rem;
-  z-index: 1; /* El video se queda en una capa base */
+  z-index: 1;
 }
 
 .video-logo {
@@ -51,15 +43,7 @@ import videoUrl from "../assets/doctor6logofloat.webm";
   transform: scale(1.05);
 }
 
-.socials {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  /* ESTO ES LO QUE ARREGLA EL CLIC: */
-  position: relative; 
-  z-index: 50; 
-}
-
+/* Podés borrar los estilos de .socials si querés limpiar, pero no molestan */
 header {
   z-index: 100;
 }

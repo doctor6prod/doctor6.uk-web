@@ -4,48 +4,33 @@
       This site works better with Javascript enabled
     </noscript>
     
-    <div class="flex items-center justify-between">
-      <!-- Logo clickeable que lleva al home -->
+    <!-- Cambié items-center por items-start o center según prefieras -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Logo -->
       <router-link :to="{ name: 'home' }">
         <img class="logo h-5" :src="logo" alt="Doctor6 Logo" />
       </router-link>
       
       <!-- Menú de navegación y redes -->
-      <ul class="flex w-full justify-between md:justify-end text-contrast gap-4 uppercase text-sm">
-        <div class="flex gap-4 items-center md:justify-between">
+      <!-- Agregamos flex-wrap para que bajen en pantallas muy chicas -->
+      <ul class="flex flex-wrap justify-center md:justify-end items-center text-contrast gap-x-4 gap-y-2 uppercase text-xs md:text-sm w-full">
+        
+        <!-- Iconos Sociales -->
+        <div class="flex gap-4 items-center">
           <SocialMedia title="instagram" link="https://www.instagram.com/doctor6produ/" />
           <SocialMedia title="youtube" link="https://www.youtube.com/@doctorsix6" />
           <SocialMedia title="discord" link="https://discord.gg/HFQNXYFwwA" />
-          
+        </div>
+        
+        <!-- Enlaces (Separados por un margen pequeño en móvil) -->
+        <div class="flex gap-4 items-center">
           <li><router-link :to="{ name: 'music' }">Music</router-link></li>
           <li><router-link :to="{ name: 'services' }">Services</router-link></li>
           <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
         </div>
+
       </ul>
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-import SocialMedia from "~/components/SocialMedia.vue";
-import logo from "../assets/doctor6_logo_v2.svg";
-</script>
-
-<style scoped lang="postcss">
-header {
-  z-index: 100;
-}
-
-a.router-link-active {
-  @apply text-accent font-bold;
-}
-
-li {
-  @apply transition-colors duration-200 hover:text-white;
-}
-
-.logo {
-  @apply transition-opacity duration-200 hover:opacity-80;
-  min-width: 50px; 
-}
-</style>
