@@ -11,7 +11,6 @@
 </template> <!-- Faltaba cerrar esta -->
 
 <script setup lang="ts">
-import logoUrl from "~/assets/doctor6_logo_v2.svg";
 import videoUrl from "../assets/doctor6logofloat.webm";
 // Saqué el import de SocialMedia porque ya no se usa acá
 </script>
