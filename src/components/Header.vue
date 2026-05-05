@@ -7,10 +7,11 @@
     <!-- Cambié items-center por items-start o center según prefieras -->
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       
-      <!-- Logo -->
-      <router-link :to="{ name: 'home' }">
-        <img class="logo h-5" :src="logo" alt="Doctor6 Logo" />
-      </router-link>
+<!-- Logo -->
+<router-link :to="{ name: 'home' }">
+  <img class="logo h-5" src="/doctor6_logo_v2.svg" alt="Doctor6 Logo" />
+</router-link>
+
       
       <!-- Menú de navegación y redes -->
       <!-- Agregamos flex-wrap para que bajen en pantallas muy chicas -->
