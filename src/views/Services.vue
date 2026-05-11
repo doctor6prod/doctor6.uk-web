@@ -12,8 +12,19 @@
 
       <!-- BOTONES DE IDIOMA -->
       <div class="flex gap-2 bg-contrast/5 p-1 rounded-lg border border-contrast/10">
-        <button @click="lang = 'es'" :class="['px-3 py-1 text-xs font-bold uppercase rounded transition-all', lang === 'es' ? 'bg-accent text-background' : 'text-contrast/40 hover:text-contrast']">Español</button>
-        <button @click="lang = 'en'" :class="['px-3 py-1 text-xs font-bold uppercase rounded transition-all', lang === 'en' ? 'bg-accent text-background' : 'text-contrast/40 hover:text-contrast']">English</button>
+        <!-- Cambio: bg-green-500 cuando está activo -->
+        <button 
+          @click="lang = 'es'" 
+          :class="['px-3 py-1 text-xs font-bold uppercase rounded transition-all', lang === 'es' ? 'bg-green-500 text-white' : 'text-contrast/40 hover:text-contrast']"
+        >
+          Español
+        </button>
+        <button 
+          @click="lang = 'en'" 
+          :class="['px-3 py-1 text-xs font-bold uppercase rounded transition-all', lang === 'en' ? 'bg-green-500 text-white' : 'text-contrast/40 hover:text-contrast']"
+        >
+          English
+        </button>
       </div>
     </section>
 
@@ -34,23 +45,34 @@
         </div>
 
         <div v-if="activeService === 'mezcla'" class="mt-8 flex flex-col gap-6">
+          <!-- PUNTOS PRINCIPALES CON PUNTOS VERDES -->
           <ul class="flex flex-col gap-4">
-            <li v-for="(point, i) in texts[lang].mix.mainPoints" :key="i" class="text-sm text-contrast/80 leading-snug">• {{ point }}</li>
+            <li v-for="(point, i) in texts[lang].mix.mainPoints" :key="i" class="text-lg text-contrast/80 leading-snug">
+              <span class="text-green-500 mr-2">•</span> {{ point }}
+            </li>
           </ul>
+          
+          <!-- SECCIÓN: CÓMO ENVIAR -->
           <div class="bg-background/50 p-5 rounded border border-contrast/10">
-            <h3 class="text-xs uppercase font-bold mb-4 text-accent">{{ lang === 'es' ? '¿Como enviar la canción?' : 'How to send the song?' }}</h3>
+            <h3 class="text-lg uppercase font-bold mb-4 text-green-500">
+              {{ lang === 'es' ? '¿Como enviar la canción?' : 'How to send the song?' }}
+            </h3>
             <ul class="flex flex-col gap-3">
-              <li v-for="(step, i) in texts[lang].mix.sendSteps" :key="i" class="text-xs text-contrast/70 italic leading-relaxed">{{ i + 1 }}. {{ step }}</li>
+              <!-- PASOS CON PUNTOS VERDES -->
+              <li v-for="(step, i) in texts[lang].mix.sendSteps" :key="i" class="text-lg text-contrast/80 leading-relaxed">
+                <span class="text-green-500 mr-2">•</span> {{ step }}
+              </li>
             </ul>
           </div>
+
           <div class="pt-6 border-t border-contrast/10">
-            <p class="text-[11px] uppercase text-contrast/40 mb-5 italic">{{ texts[lang].mix.conditions }}</p>
+            <p class="text-base uppercase text-contrast/40 mb-5">{{ texts[lang].mix.conditions }}</p>
             <div class="flex justify-between items-center">
               <div>
-                <p class="text-[10px] uppercase text-contrast/40">{{ lang === 'es' ? 'Precio' : 'Price' }}</p>
-                <p class="text-2xl font-bold">{{ texts[lang].mix.price }}</p>
+                <p class="text-xs uppercase text-contrast/40">{{ lang === 'es' ? 'Precio' : 'Price' }}</p>
+                <p class="text-3xl font-bold text-green-500">{{ texts[lang].mix.price }}</p>
               </div>
-              <a :href="'https://wa.me' + texts[lang].mix.waText" target="_blank" class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase">Contact</a>
+              <a :href="'https://wa.me' + texts[lang].mix.waText" target="_blank" class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors">Contact</a>
             </div>
           </div>
         </div>
@@ -65,7 +87,7 @@
           <h2 class="text-2xl font-bold uppercase tracking-tighter">{{ texts[lang].voces.title }}</h2>
           <span class="text-xs bg-contrast/10 px-2 py-1 rounded">{{ activeService === 'voces' ? '−' : '+' }}</span>
         </div>
-        <div v-if="activeService === 'voces'" class="mt-4 text-contrast/60 italic text-sm">
+        <div v-if="activeService === 'voces'" class="mt-4 text-contrast/60 italic text-base">
           {{ lang === 'es' ? 'Contenido de mezcla de voces próximamente...' : 'Vocal mixing content coming soon...' }}
         </div>
       </div>
@@ -86,12 +108,15 @@
 
       <!-- 4. CUSTOM BEAT -->
       <div 
-        class="border border-contrast/10 p-6 rounded-lg bg-contrast/5 w-full transition-all duration-300 cursor-pointer opacity-50"
+        class="border border-contrast/10 p-6 rounded-lg bg-contrast/5 w-full transition-all duration-300 cursor-pointer"
         @click="activeService = activeService === 'beats' ? null : 'beats'"
       >
         <div class="flex justify-between items-start">
           <h2 class="text-2xl font-bold uppercase tracking-tighter">{{ texts[lang].beats.title }}</h2>
-          <p class="text-contrast/40 text-xs uppercase italic">Coming Soon</p>
+          <span class="text-xs bg-contrast/10 px-2 py-1 rounded">{{ activeService === 'beats' ? '−' : '+' }}</span>
+        </div>
+        <div v-if="activeService === 'beats'" class="mt-4 text-contrast/60 italic text-sm">
+          {{ lang === 'es' ? 'Contenido de Custom Beats próximamente...' : 'Custom Beats content coming soon...' }}
         </div>
       </div>
 
@@ -108,10 +133,10 @@ export default {
       texts: {
         es: {
           mix: {
-            title: 'Mezcla y Mastering',
-            subtitle: 'MULTITRACK',
+            title: 'Mezcla Multirack',
+            subtitle: 'Mastering bonificado',
             price: '$80.000 ARS',
-            waText: 'Hola! Me interesa el servicio de Mezcla + Mastering',
+            waText: 'Hola! Me interesa el servicio de Mezcla + Mastering bonificado',
             mainPoints: [
               "Tiempo de entrega estimado 2 semanas (El tiempo puede variar dependiendo del proyecto, siendo los tiempos de entrega mas rápidos o más lentos)",
               "Recibiras tu canción en formato WAV 44.1khz 24bits y MP3 de alta calidad (si lo requiere puede pedir la version en 48Khz)",
