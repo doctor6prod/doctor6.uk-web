@@ -73,7 +73,7 @@
                 <p class="text-3xl font-bold text-green-500">{{ texts[lang].mix.price }}</p>
               </div>
 <a 
-  :href="lang === 'es' ? 'wa.me/5491126949791' + texts[lang].mix.waText : 'https://tally.so/r/D4Aabq'" 
+  :href="lang === 'es' ? 'https://wa.me/5491126949791' : 'https://tally.so/r/D4Aabq'" 
   target="_blank" 
   class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors"
 >
@@ -165,9 +165,9 @@ export default {
         },
 en: {
   mix: {
-    title: 'Mixing & Mastering',
+    title: 'Multitrack Mixing',
     subtitle: 'Mastering included',
-    price: '$80 USD',
+    price: '$60 USD',
     mainPoints: [
       "Estimated delivery time: 2 weeks (Time may vary depending on the project, with delivery times being faster or slower)",
       "You will receive your song in WAV 44.1khz 24bits and high-quality MP3 format (48Khz version available upon request)",
