@@ -1,7 +1,7 @@
 <template>
   <section class="homepage">
     <!-- Video centrado y clickeable -->
-    <router-link :to="{ name: 'music' }" class="video-container">
+    <router-link :to="{ name: 'portfolio' }" class="video-container">
       <video autoplay muted loop playsinline class="video-logo">
         <source :src="videoUrl" type="video/webm" />
         Tu navegador no soporta video en formato WebM.

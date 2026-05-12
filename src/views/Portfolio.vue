@@ -2,7 +2,7 @@
   <div class="padding text-contrast">
     <section>
       <!-- Solo dejamos el título para un look más minimalista -->
-      <h1 class="text-4xl font-bold">Music</h1>
+      <h1 class="text-4xl font-bold">Portfolio</h1>
 
       <!-- Lista de Canciones -->
       <div class="mt-10 flex flex-col gap-6">

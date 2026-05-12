@@ -26,7 +26,7 @@
         
         <!-- Enlaces (Separados por un margen pequeño en móvil) -->
         <div class="flex gap-4 items-center">
-          <li><router-link :to="{ name: 'music' }">Music</router-link></li>
+          <li><router-link :to="{ name: 'portfolio' }">Portfolio</router-link></li>
           <li><router-link :to="{ name: 'services' }">Services</router-link></li>
           <li><router-link :to="{ name: 'biography' }">Biography</router-link></li>
         </div>
