@@ -72,7 +72,15 @@
                 <p class="text-xs uppercase text-contrast/40">{{ lang === 'es' ? 'Precio' : 'Price' }}</p>
                 <p class="text-3xl font-bold text-green-500">{{ texts[lang].mix.price }}</p>
               </div>
-              <a :href="'https://wa.me' + texts[lang].mix.waText" target="_blank" class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors">Contact</a>
+<a 
+  :href="lang === 'es' ? 'wa.me/5491126949791' + texts[lang].mix.waText : 'https://tally.so/r/D4Aabq'" 
+  target="_blank" 
+  class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors"
+>
+  {{ lang === 'es' ? 'Contactar' : 'Contact' }}
+</a>
+            
+              
             </div>
           </div>
         </div>
@@ -155,12 +163,29 @@ export default {
           mentoria: { title: 'Mentoría privada' },
           beats: { title: 'Custom Beat' }
         },
-        en: {
-          mix: { title: '', subtitle: '', price: '', waText: '', mainPoints: [], sendSteps: [], conditions: '' },
-          voces: { title: 'Vocal Mixing' },
-          mentoria: { title: 'Private Mentorship' },
-          beats: { title: 'Custom Beat' }
-        }
+en: {
+  mix: {
+    title: 'Mixing & Mastering',
+    subtitle: 'Mastering included',
+    price: '$80 USD',
+    mainPoints: [
+      "Estimated delivery time: 2 weeks (Time may vary depending on the project, with delivery times being faster or slower)",
+      "You will receive your song in WAV 44.1khz 24bits and high-quality MP3 format (48Khz version available upon request)",
+      "The song will be delivered Mixed and Mastered (unmastered version included in case you use a specific mastering engineer)"
+    ],
+    sendSteps: [
+      "Export all tracks separately as they appear in your project with their proper nomenclature (so I can clearly identify each channel)",
+      "If you have reverb or effects on vocals, send both the raw (dry) version and the processed version",
+      "Create a ZIP file with a text document specifying the project BPM and Key (Key is only required if vocal tuning or autotune is needed)",
+      "Communicate the concept of your song beforehand (you can include a reference track or describe what the piece seeks to express to help us align faster)",
+      "Clarify before starting the level of creative freedom granted in the mix, whether you are looking for a methodical mix or a creative mix (applying distinctive effects)"
+    ],
+    conditions: 'Agreement conditions: Include in credits and social media @doctor6mixer or "mixer: Doctor 6". 50% upfront payment and 50% upon completion (unless you are a regular client)'
+  },
+  voces: { title: 'Vocal Mixing' },
+  mentoria: { title: 'Private Mentorship' },
+  beats: { title: 'Custom Beat' }
+}
       }
     }
   }
