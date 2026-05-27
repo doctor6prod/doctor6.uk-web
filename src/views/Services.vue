@@ -99,6 +99,7 @@
           {{ lang === 'es' ? 'Contenido de mezcla de voces próximamente...' : 'Vocal mixing content coming soon...' }}
         </div>
       </div>
+      
 
       <!-- 3. MENTORIA PRIVADA -->
       <div 
@@ -157,7 +158,7 @@ export default {
               "Comunicar previamente el concepto de tu canción (podes incluir una canción de referencia o comentarme lo que busca expresar la pieza ya que esto ayuda a entendernos más rápido)",
               "Aclararme antes de comenzar el nivel de libertad que se me otorga en la mezcla si buscas una mezcla metódica o una mezcla creativa (aplicando efectos distintivos)"
             ],
-            conditions: 'Condiciones de acuerdo: Incluir en creditos y redes @doctor6mixer o "mixer: Doctor 6". El pago se efectua el 50% por adelantado y el 50% al terminar (a menos que sea cliente habitual)'
+            conditions: 'Condiciones de acuerdo: Incluir en creditos y redes @kaynekmixer o "mixer: Kaynek". El pago se efectua el 50% por adelantado y el 50% al terminar (a menos que sea cliente habitual)'
           },
           voces: { title: 'Mezcla de voces' },
           mentoria: { title: 'Mentoría privada' },
@@ -180,7 +181,7 @@ en: {
       "Communicate the concept of your song beforehand (you can include a reference track or describe what the piece seeks to express to help us align faster)",
       "Clarify before starting the level of creative freedom granted in the mix, whether you are looking for a methodical mix or a creative mix (applying distinctive effects)"
     ],
-    conditions: 'Agreement conditions: Include in credits and social media @doctor6mixer or "mixer: Doctor 6". 50% upfront payment and 50% upon completion (unless you are a regular client)'
+    conditions: 'Agreement conditions: Include in credits and social media @kaynekmixer or "mixer: Kaynek". 50% upfront payment and 50% upon completion (unless you are a regular client)'
   },
   voces: { title: 'Vocal Mixing' },
   mentoria: { title: 'Private Mentorship' },

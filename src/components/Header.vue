@@ -19,8 +19,8 @@
         
         <!-- Iconos Sociales -->
         <div class="flex gap-4 items-center">
-          <SocialMedia title="instagram" link="https://www.instagram.com/doctor6produ/" />
-          <SocialMedia title="youtube" link="https://www.youtube.com/@doctorsix6" />
+          <SocialMedia title="instagram" link="https://www.instagram.com/kaynekmixer/" />
+          <SocialMedia title="youtube" link="https://www.youtube.com/@KAYNEKmusic" />
           <SocialMedia title="discord" link="https://discord.gg/HFQNXYFwwA" />
         </div>
         
