@@ -73,7 +73,7 @@
                 <p class="text-3xl font-bold text-green-500">{{ texts[lang].mix.price }}</p>
               </div>
 <a 
-  :href="lang === 'es' ? 'https://wa.me/5491126949791' : 'https://tally.so/r/D4Aabq'" 
+  :href="lang === 'es' ? 'https://wa.me/5491126949791' : 'https://tally.so/r/7RpB70'" 
   target="_blank" 
   class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors"
 >
@@ -151,7 +151,7 @@
       <a 
         :href="lang === 'es'
           ? 'https://wa.me/5491126949791'
-          : 'https://tally.so/r/D4Aabq'"
+          : 'https://tally.so/r/7RpB70'"
         target="_blank"
         class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors"
       >
