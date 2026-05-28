@@ -275,7 +275,7 @@ en: {
     mainPoints: [
       "Estimated delivery time: 10 days (Time may vary depending on the project, with delivery times being faster or slower)",
       "You will receive your song in WAV 44.1khz 24bits and high-quality MP3 format (48Khz version available upon request)",
-      "The song will be delivered Mixed and Mastered (unmastered version included in case you use a specific mastering engineer)"
+      "The song will be delivered with the vocals added to the instrumental"
     ],
     sendSteps: [
       "Export all tracks separately as they appear in your project with their proper nomenclature (so I can clearly identify each channel)",
