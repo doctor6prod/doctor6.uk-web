@@ -4,10 +4,10 @@
     <section>
       <h1>Biography</h1>
       <p>
-        <strong>Doctor 6 (Six)</strong> is an Argentine producer and mixer dedicated to the relentless pursuit of sonic precision. 
+        <strong>Kaynek</strong> is an Argentine producer and mixer dedicated to the relentless pursuit of sonic precision. 
         His work explores the contrast between the raw aggression of bass music and the melodic atmospheres of Deep House.
         <br><br>
-        Drawing from a background in IT and mechanics, Six views sound as a complex system to be engineered, focusing on "corrupted" textures and industrial glitches.
+        Drawing from a background in IT and mechanics, he views sound as a complex system to be engineered, focusing on "corrupted" textures and industrial glitches.
       </p>
 
       <!-- Hito: 15 años -->
@@ -16,7 +16,7 @@
           <h2>At age 15</h2>
         </header>
         <p>
-          Six began his journey into production using a basic Pentium 4 PC. What started as teenage beatmaking 
+          He began his journey into production using a basic Pentium 4 PC. What started as teenage beatmaking 
           soon turned into an obsession with audio architecture, leading him to explore piano and professional vocal coaching, 
           while also teaching himself guitar.
         </p>
@@ -40,7 +40,7 @@
           <h2>In recent years</h2>
         </header>
         <p>
-          Six has focused on specialized training in bass music and electronic mixing from Germany. Rather than following trends, 
+          He has focused on specialized training in bass music and electronic mixing from Germany. Rather than following trends, 
           he is committed to the craft of sound design, constantly refining his output to bridge the gap between technical 
           grit and melodic clarity.
         </p>
@@ -53,7 +53,7 @@
         </header>
         <p>
           His current vision is a collision of worlds: a constant effort to <strong>contrast the raw aggression of Bass Music with deep melodic sensitivity</strong>. 
-          By merging experimental sound design with true musicality to avoid generic structures, Six continues to build his own sonic universe—a place where industrial machinery and <strong>spatial atmospheres</strong> converge.
+          By merging experimental sound design with true musicality to avoid generic structures, he continues to build his own sonic universe—a place where industrial machinery and <strong>spatial atmospheres</strong> converge.
         </p>
       </section>
     </section>
