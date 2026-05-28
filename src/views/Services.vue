@@ -95,10 +95,76 @@
           <h2 class="text-2xl font-bold uppercase tracking-tighter">{{ texts[lang].voces.title }}</h2>
           <span class="text-xs bg-contrast/10 px-2 py-1 rounded">{{ activeService === 'voces' ? '−' : '+' }}</span>
         </div>
-        <div v-if="activeService === 'voces'" class="mt-4 text-contrast/60 italic text-base">
-          {{ lang === 'es' ? 'Contenido de mezcla de voces próximamente...' : 'Vocal mixing content coming soon...' }}
-        </div>
+<div v-if="activeService === 'voces'" class="mt-8 flex flex-col gap-6">
+
+  <!-- PUNTOS PRINCIPALES -->
+  <ul class="flex flex-col gap-4">
+    <li 
+      v-for="(point, i) in texts[lang].voces.mainPoints" 
+      :key="i"
+      class="text-lg text-contrast/80 leading-snug"
+    >
+      <span class="text-green-500 mr-2">•</span>
+      {{ point }}
+    </li>
+  </ul>
+
+  <!-- COMO ENVIAR -->
+  <div class="bg-background/50 p-5 rounded border border-contrast/10">
+
+    <h3 class="text-lg uppercase font-bold mb-4 text-green-500">
+      {{ lang === 'es' ? '¿Como enviar las voces?' : 'How to send vocals?' }}
+    </h3>
+
+    <ul class="flex flex-col gap-3">
+      <li 
+        v-for="(step, i) in texts[lang].voces.sendSteps" 
+        :key="i"
+        class="text-lg text-contrast/80 leading-relaxed"
+      >
+        <span class="text-green-500 mr-2">•</span>
+        {{ step }}
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- PRECIO -->
+  <div class="pt-6 border-t border-contrast/10">
+
+    <p class="text-base uppercase text-contrast/40 mb-5">
+      {{ texts[lang].voces.conditions }}
+    </p>
+
+    <div class="flex justify-between items-center">
+
+      <div>
+        <p class="text-xs uppercase text-contrast/40">
+          {{ lang === 'es' ? 'Precio' : 'Price' }}
+        </p>
+
+        <p class="text-3xl font-bold text-green-500">
+          {{ texts[lang].voces.price }}
+        </p>
       </div>
+
+      <a 
+        :href="lang === 'es'
+          ? 'https://wa.me/5491126949791'
+          : 'https://tally.so/r/D4Aabq'"
+        target="_blank"
+        class="bg-contrast text-background px-6 py-3 rounded text-xs font-bold uppercase hover:bg-green-500 transition-colors"
+      >
+        {{ lang === 'es' ? 'Contactar' : 'Contact' }}
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+      </div>
+      
       
 
       <!-- 3. MENTORIA PRIVADA -->
@@ -160,7 +226,27 @@ export default {
             ],
             conditions: 'Condiciones de acuerdo: Incluir en creditos y redes @kaynekmixer o "mixer: Kaynek". El pago se efectua el 50% por adelantado y el 50% al terminar (a menos que sea cliente habitual)'
           },
-          voces: { title: 'Mezcla de voces' },
+          voces: { title: 'Mezcla de voces' ,
+          subtitle: 'Añadir voces a una pista',
+            price: '$40.000 ARS',
+            waText: 'Hola! Me interesa el servicio de Mezcla + Mastering bonificado',
+            mainPoints: [
+              "Tiempo de entrega estimado 10 días (El tiempo puede variar dependiendo del proyecto, siendo los tiempos de entrega mas rápidos o más lentos)",
+              "Recibiras tu canción en formato WAV 44.1khz 24bits y MP3 de alta calidad (si lo requiere puede pedir la version en 48Khz)",
+              "La cancion se entregara Mezclada y con las voces añadidas a la instrumental"
+            ],
+            sendSteps: [
+              "Exportar todas las pistas por separado tal cual estan en tu proyecto con su nomenclatura (para saber bien que canal es el que estoy viendo)",
+              "Si tienen reverb o efectos en voces enviar la version en crudo y la version procesada",
+              "Crear un zip con un archivo de texto dentro especificicando el BPM del proyecto y tonalidad (la tonalidad solo si requiere afinación de voces o autotune)",
+              "Comunicar previamente el concepto de tu canción (podes incluir una canción de referencia o comentarme lo que busca expresar la pieza ya que esto ayuda a entendernos más rápido)",
+              "Aclararme antes de comenzar el nivel de libertad que se me otorga en la mezcla si buscas una mezcla metódica o una mezcla creativa (aplicando efectos distintivos)"
+            ],
+            conditions: 'Condiciones de acuerdo: Incluir en creditos y redes @kaynekmixer o "mixer: Kaynek". El pago se efectua el 50% por adelantado y el 50% al terminar (a menos que sea cliente habitual)'
+          },
+          
+
+
           mentoria: { title: 'Mentoría privada' },
           beats: { title: 'Custom Beat' }
         },
@@ -183,7 +269,24 @@ en: {
     ],
     conditions: 'Agreement conditions: Include in credits and social media @kaynekmixer or "mixer: Kaynek". 50% upfront payment and 50% upon completion (unless you are a regular client)'
   },
-  voces: { title: 'Vocal Mixing' },
+  voces: { title: 'Vocal Mixing' ,
+  subtitle: 'Vocals added to the instrumental',
+    price: '$25 USD',
+    mainPoints: [
+      "Estimated delivery time: 10 days (Time may vary depending on the project, with delivery times being faster or slower)",
+      "You will receive your song in WAV 44.1khz 24bits and high-quality MP3 format (48Khz version available upon request)",
+      "The song will be delivered Mixed and Mastered (unmastered version included in case you use a specific mastering engineer)"
+    ],
+    sendSteps: [
+      "Export all tracks separately as they appear in your project with their proper nomenclature (so I can clearly identify each channel)",
+      "If you have reverb or effects on vocals, send both the raw (dry) version and the processed version",
+      "Create a ZIP file with a text document specifying the project BPM and Key (Key is only required if vocal tuning or autotune is needed)",
+      "Communicate the concept of your song beforehand (you can include a reference track or describe what the piece seeks to express to help us align faster)",
+      "Clarify before starting the level of creative freedom granted in the mix, whether you are looking for a methodical mix or a creative mix (applying distinctive effects)"
+    ],
+    conditions: 'Agreement conditions: Include in credits and social media @kaynekmixer or "mixer: Kaynek". 50% upfront payment and 50% upon completion (unless you are a regular client)'
+  },
+  
   mentoria: { title: 'Private Mentorship' },
   beats: { title: 'Custom Beat' }
 }
