@@ -11,6 +11,7 @@ declare module 'vue' {
     IFluencyGithub: typeof import('~icons/fluency/github')['default']
     IFluencyInstagram: typeof import('~icons/fluency/instagram')['default']
     IFluencyTank: typeof import('~icons/fluency/tank')['default']
+    IFluencyTwitch: typeof import('~icons/fluency/twitch')['default']
     IFluencyTwitter: typeof import('~icons/fluency/twitter')['default']
     IFluencyYoutube: typeof import('~icons/fluency/youtube')['default']
     SocialMedia: typeof import('./src/components/SocialMedia.vue')['default']

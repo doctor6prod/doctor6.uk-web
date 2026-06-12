@@ -15,6 +15,7 @@
     <i-fluency-discord v-if="link.includes('discord')" class="w-5 h-5" />
     <i-fluency-github v-if="link.includes('github')" class="w-5 h-5" />
     <i-fluency-bandcamp v-if="link.includes('bandcamp')" class="w-5 h-5" />
+    <i-fluency-twitch v-if="link.includes('twitch')" class="w-5 h-5" />
   </a>
 </template>
 

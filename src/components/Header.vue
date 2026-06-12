@@ -21,6 +21,7 @@
         <div class="flex gap-4 items-center">
           <SocialMedia title="instagram" link="https://www.instagram.com/kaynekmixer/" />
           <SocialMedia title="youtube" link="https://www.youtube.com/@KAYNEKmusic" />
+          <SocialMedia title="twitch" link="https://www.twitch.tv/kaynek_bass" />
         </div>
         
         <!-- Enlaces (Separados por un margen pequeño en móvil) -->
