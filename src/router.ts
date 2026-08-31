@@ -14,8 +14,8 @@ export const routes: RouteRecordRaw[] = [
     meta: { title: "Doctor 6 | Biography" },
   },
   {
-    path: "/portfolio",
-    name: "portfolio",
+    path: "/music",
+    name: "music",
     component: () => import("./views/Music.vue"),
     meta: { title: "Doctor 6 | Music" },
   },
