@@ -22,7 +22,6 @@
           <SocialMedia title="instagram" link="https://www.instagram.com/kaynekmixer/" />
           <SocialMedia title="youtube" link="https://www.youtube.com/@KAYNEKmusic" />
           <SocialMedia title="twitch" link="https://www.twitch.tv/kaynek_bass" />
-          <SocialMedia title="discord" link="https://discord.gg/UQq4aGQfjT" />
         </div>
         
         <!-- Enlaces (Separados por un margen pequeño en móvil) -->
