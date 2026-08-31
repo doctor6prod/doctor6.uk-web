@@ -164,36 +164,6 @@
 
 </div>
       </div>
-      
-      
-
-      <!-- 3. MENTORIA PRIVADA -->
-      <div 
-        class="border border-contrast/10 p-6 rounded-lg bg-contrast/5 w-full transition-all duration-300 cursor-pointer"
-        @click="activeService = activeService === 'mentoria' ? null : 'mentoria'"
-      >
-        <div class="flex justify-between items-start">
-          <h2 class="text-2xl font-bold uppercase tracking-tighter">{{ texts[lang].mentoria.title }}</h2>
-          <span class="text-xs bg-contrast/10 px-2 py-1 rounded">{{ activeService === 'mentoria' ? '−' : '+' }}</span>
-        </div>
-        <div v-if="activeService === 'mentoria'" class="mt-4 text-contrast/60 italic text-sm">
-          {{ lang === 'es' ? 'Contenido de mentoría próximamente...' : 'Mentorship content coming soon...' }}
-        </div>
-      </div>
-
-      <!-- 4. CUSTOM BEAT -->
-      <div 
-        class="border border-contrast/10 p-6 rounded-lg bg-contrast/5 w-full transition-all duration-300 cursor-pointer"
-        @click="activeService = activeService === 'beats' ? null : 'beats'"
-      >
-        <div class="flex justify-between items-start">
-          <h2 class="text-2xl font-bold uppercase tracking-tighter">{{ texts[lang].beats.title }}</h2>
-          <span class="text-xs bg-contrast/10 px-2 py-1 rounded">{{ activeService === 'beats' ? '−' : '+' }}</span>
-        </div>
-        <div v-if="activeService === 'beats'" class="mt-4 text-contrast/60 italic text-sm">
-          {{ lang === 'es' ? 'Contenido de Custom Beats próximamente...' : 'Custom Beats content coming soon...' }}
-        </div>
-      </div>
 
     </section>
   </div>
@@ -245,10 +215,6 @@ export default {
             conditions: 'Condiciones de acuerdo: Incluir en creditos y redes @kaynekmixer o "mixer: Kaynek". El pago se efectua el 50% por adelantado y el 50% al terminar (a menos que sea cliente habitual)'
           },
           
-
-
-          mentoria: { title: 'Mentoría privada' },
-          beats: { title: 'Custom Beat' }
         },
 en: {
   mix: {
@@ -287,8 +253,6 @@ en: {
     conditions: 'Agreement conditions: Include in credits and social media @kaynekmixer or "mixer: Kaynek". 50% upfront payment and 50% upon completion (unless you are a regular client)'
   },
   
-  mentoria: { title: 'Private Mentorship' },
-  beats: { title: 'Custom Beat' }
 }
       }
     }
